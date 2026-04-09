@@ -4,8 +4,11 @@ const mongoose = require("mongoose");
    MongoDB Connection
 ========================= */
 
-mongoose.connect("mongodb://localhost:27017/nova_store")
-.then(() => console.log("✅ MongoDB Connected for seeding"))
+const MONGO_URI = process.env.MONGO_URI || 
+"mongodb+srv://novaUser:NovaStore2026@cluster0.fzuyeqi.mongodb.net/nova_store?retryWrites=true&w=majority";
+
+mongoose.connect(MONGO_URI)
+.then(() => console.log("✅ MongoDB Connected"))
 .catch(err => console.log("❌ MongoDB Error:", err));
 
 /* =========================
@@ -94,7 +97,7 @@ const Product = mongoose.model("Product", productSchema);
 ========================= */
 
 const products = [
-    {
+     {
     name: 'iPhone 15 Pro',
     longDescription: 'The first iPhone with an aerospace-grade titanium design and the A17 Pro chip.',
     basePrice: 3490,
@@ -1159,7 +1162,7 @@ const products = [
       { name: '1TB', priceMod: 1500 }
     ],
     colors: [
-       { name: 'Cobalt Violet', hex: '#4F3FB6', image: 'pics/s26ultraviolet.png' },
+    { name: 'Cobalt Violet', hex: '#4F3FB6', image: 'pics/s26ultraviolet.png' },
     { name: 'Black', hex: '#1A1A1A', image: 'pics/samsungs26ultrablack.webp' },
     { name: 'Sky Blue', hex: '#87CEEB', image: 'pics/s26ultraskyblue.png' },
     { name: 'White', hex: '#F5F5F5', image: 'pics/s26ultrawhite.png' }
@@ -1170,31 +1173,24 @@ const products = [
   // GALAXY Z FLIP SERIES
   // =========================
 
-  {
+ {
   name: 'Galaxy Z Flip7',
-  shortName: 'Z Flip7',
-  brand: 'Samsung',
-  category: 'Smartphone',
   longDescription: 'Slim premium flip phone with Galaxy AI, a larger 4.1-inch FlexWindow, flagship-level 50MP camera system, and a compact foldable design.',
-
-  // UAE market-based pricing
-  basePrice: 4299, // 256GB
-  currency: 'AED',
+  basePrice: 3479,
   isNew: true,
 
   bgColor: '#000000',
   textColor: '#ffffff',
 
   gallery: [
-    'pics/zflip7-1.png',
-    'pics/zflip7-2.png',
-    'pics/zflip7-3.png'
+    'pics/extraimg7flip-1.jpg',
+    'pics/extraimg7flip-2.jpg',
+    'pics/extraimgzflip7.jpg'
   ],
 
   specs: [
     { label: 'Main Display', value: '6.9" Dynamic AMOLED 2X, 120Hz' },
     { label: 'Cover Display', value: '4.1" Super AMOLED FlexWindow, 120Hz' },
-    { label: 'Peak Brightness', value: 'Up to 2600 nits' },
     { label: 'Processor', value: 'Samsung Exynos 2500 (3nm)' },
     { label: 'RAM', value: '12GB' },
     { label: 'Storage', value: '256GB / 512GB' },
@@ -1202,6 +1198,7 @@ const products = [
     { label: 'Front Camera', value: '10MP Selfie Camera' },
     { label: 'Video Recording', value: 'Up to 4K at 60fps' },
     { label: 'Battery', value: '4300mAh' },
+    { label: 'Charging', value: '25W Fast Charging' },
     { label: 'Durability', value: 'Armor Aluminum, Gorilla Glass Victus 2' },
     { label: 'Water Resistance', value: 'IP48' },
     { label: 'Weight', value: '188g' },
@@ -1211,56 +1208,48 @@ const products = [
   ],
 
   storageOptions: [
-    { name: '256GB', priceMod: 0, marketPrice: 4299 },
-    { name: '512GB', priceMod: 500, marketPrice: 4799 }
+    { name: '256GB', priceMod: 0,  },
+    { name: '512GB', priceMod: 435, }
   ],
 
   colors: [
     {
-      name: 'Blue Shadow',
+      name: 'BlueShadow',
       hex: '#627ea0',
-      image: 'pics\galzy7flipblueshadow.png',
-      priceMod: 0
+      image: 'pics/galaxy7flipblueshadow.png',
     },
     {
       name: 'Jetblack',
       hex: '#1c1c1c',
       image: 'pics/galaxy7flipjetblack.png',
-      priceMod: 0
     },
     {
       name: 'Coralred',
       hex: '#d9655d',
-      image: 'pics/galaxy7flipcoralred.png',
-      priceMod: 0
+      image: 'pics/galaxy7flipjcoralred.png',
     },
     {
       name: 'Mint',
       hex: '#c8ebdf',
       image: 'pics/galaxy7flipmint.png',
-      priceMod: 0
     }
   ],
+  inventory: [
+        { color: 'BlueShadow', storage: '256GB', stock: 7 },
+        { color: 'BlueShadow', storage: '512GB', stock: 5 },
+      
+        { color: 'Jetblack', storage: '256GB', stock: 2 },
+        { color: 'Jetblack', storage: '512GB', stock: 2 },
+        
 
-  // Inventory based on color + storage
-  inventory: {
-    'Blue Shadow': {
-      '256GB': 9,
-      '512GB': 5
-    },
-    'Jetblack': {
-      '256GB': 7,
-      '512GB': 4
-    },
-    'Coralred': {
-      '256GB': 6,
-      '512GB': 3
-    },
-    'Mint': {
-      '256GB': 2,
-      '512GB': 1
-    }
-  },
+        { color: 'Coralred', storage: '256GB', stock: 10 },
+        { color: 'Coralred', storage: '512GB', stock: 1 },
+       
+
+        { color: 'Mint', storage: '256GB', stock: 0 },
+        { color: 'Mint', storage: '512GB', stock: 10 },
+       
+    ]
 },
 
   {
@@ -1268,13 +1257,9 @@ const products = [
     longDescription: 'More affordable Galaxy flip phone with Galaxy AI, compact foldable styling, and strong everyday performance.',
     basePrice: 2599,
     isNew: true,
-    bgColor: '#ffffff',
-    textColor: '#111111',
-    gallery: [
-      'pics/zflip7fe-1.png',
-      'pics/zflip7fe-2.png',
-      'pics/zflip7fe-3.png'
-    ],
+    bgColor: '#000000',
+    textColor: '#ffffff',
+    
     specs: [
       { label: 'Main Display', value: '6.7" AMOLED, 120Hz' },
       { label: 'Cover Display', value: '3.4" FlexWindow' },
@@ -1283,12 +1268,17 @@ const products = [
       { label: 'Battery', value: '4000mAh' }
     ],
     storageOptions: [
-      { name: '128GB', priceMod: 0 },
-      { name: '256GB', priceMod: 100 }
+      { name: '256GB', priceMod: 0 }
     ],
     colors: [
-      { name: 'Black', hex: '#202020', image: 'pics/zflip7fe-black.png' },
-      { name: 'White', hex: '#f3f3f3', image: 'pics/zflip7fe-white.png' }
+      { name: 'Black', hex: '#202020', image: 'pics/zflip7feblack.png' },
+      { name: 'White', hex: '#f3f3f3', image: 'pics/zflip7fewhite.png' }
+    ],
+    inventory: [
+        { color: 'Black', storage: '256GB', stock: 7 },
+         { color: 'White', storage: '256GB', stock: 5 },
+       
+       
     ]
   },
 
@@ -1323,36 +1313,7 @@ const products = [
     ]
   },
 
-  {
-    name: 'Galaxy Z Flip5',
-    longDescription: 'Stylish Samsung foldable with a larger cover screen, compact design, and smooth flagship-level everyday use.',
-    basePrice: 1360,
-    isNew: false,
-    bgColor: '#ffffff',
-    textColor: '#111111',
-    gallery: [
-      'pics/zflip5-1.png',
-      'pics/zflip5-2.png',
-      'pics/zflip5-3.png'
-    ],
-    specs: [
-      { label: 'Main Display', value: '6.7" Dynamic AMOLED 2X, 120Hz' },
-      { label: 'Cover Display', value: '3.4" Super AMOLED' },
-      { label: 'Chip', value: 'Snapdragon 8 Gen 2 for Galaxy' },
-      { label: 'Camera', value: '12MP + 12MP Dual Camera' },
-      { label: 'Battery', value: '3700mAh' }
-    ],
-    storageOptions: [
-      { name: '256GB', priceMod: 0 },
-      { name: '512GB', priceMod: 339 }
-    ],
-    colors: [
-      { name: 'Graphite', hex: '#4e5359', image: 'pics/zflip5-graphite.png' },
-      { name: 'Mint', hex: '#cae9de', image: 'pics/zflip5-mint.png' },
-      { name: 'Lavender', hex: '#d8c7ef', image: 'pics/zflip5-lavender.png' },
-      { name: 'Cream', hex: '#f0eadb', image: 'pics/zflip5-cream.png' }
-    ]
-  },
+
 
   // =========================
   // GALAXY Z FOLD SERIES
@@ -1732,6 +1693,7 @@ const products = [
         { name: 'Navy', hex: '#203864', image: 'pics/galaxytab-navy.png' }
     ]
 }
+ 
 ];
 
 /* =========================

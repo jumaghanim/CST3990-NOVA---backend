@@ -4,7 +4,7 @@ const cors = require("cors");
 const bcrypt = require("bcryptjs");
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 /* =========================
    Middleware
@@ -17,7 +17,10 @@ app.use(express.json());
    MongoDB Connection
 ========================= */
 
-mongoose.connect("mongodb://localhost:27017/nova_store")
+const MONGO_URI = process.env.MONGO_URI || 
+"mongodb+srv://novaUser:NovaStore2026@cluster0.fzuyeqi.mongodb.net/nova_store?retryWrites=true&w=majority";
+
+mongoose.connect(MONGO_URI)
 .then(() => console.log("✅ MongoDB Connected"))
 .catch(err => console.log("❌ MongoDB Error:", err));
 
@@ -395,6 +398,9 @@ app.get("/api/products/:id", async (req, res) => {
 
 app.post("/api/orders", async (req, res) => {
     try {
+        console.log("Order request received");
+        console.log("Request body:", req.body);
+
         const {
             checkoutForm,
             cart,
@@ -403,6 +409,8 @@ app.post("/api/orders", async (req, res) => {
             estimatedDeliveryDate,
             userId
         } = req.body;
+
+        console.log("Cart received:", cart);
 
         if (!checkoutForm || !Array.isArray(cart) || cart.length === 0) {
             return res.status(400).json({ message: "Invalid order data" });
@@ -438,15 +446,19 @@ app.post("/api/orders", async (req, res) => {
         let totalPrice = 0;
 
         for (const item of cart) {
+            console.log("Checking cart item:", item);
+
             const product = await Product.findById(item.productId);
+            console.log("Found product:", product ? product.name : "NOT FOUND");
 
             if (!product) {
                 return res.status(404).json({ message: `Product not found: ${item.name}` });
             }
 
             const computedPrice = calculateItemPrice(product, item);
-
             const stockResult = reduceStockForItem(product, item);
+
+            console.log("Stock result:", stockResult);
 
             if (!stockResult.success) {
                 return res.status(400).json({ message: stockResult.message });
@@ -499,7 +511,11 @@ app.post("/api/orders", async (req, res) => {
             purchaseDate: new Date()
         });
 
+        console.log("Saving order:", order);
+
         await order.save();
+
+        console.log("Order saved successfully");
 
         const now = new Date();
 
@@ -525,8 +541,8 @@ app.post("/api/orders", async (req, res) => {
         });
 
     } catch (error) {
-        console.log(error);
-        res.status(500).json({ message: "Failed to place order" });
+        console.error("Order route error:", error);
+        res.status(500).json({ message: error.message || "Failed to place order" });
     }
 });
 
@@ -662,5 +678,5 @@ function reduceStockForItem(product, item) {
 ========================= */
 
 app.listen(PORT, () => {
-    console.log(`🚀 Server running on http://localhost:${PORT}`);
+    console.log(`🚀 Server running on port ${PORT}`);
 });
