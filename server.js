@@ -19,7 +19,7 @@ app.use(express.json());
 
 const MONGO_URI =
     process.env.MONGO_URI ||
-    "mongodb+srv://novaUser:NovaStore2026@cluster0.fzuyeqi.mongodb.net/nova_store?retryWrites=true&w=majority";
+    "mongodb+srv://novaUser:NovaStore2026@cluster0.fzuyeqi.mongodb.net/nova_store";
 
 if (!MONGO_URI) {
     console.error("❌ MONGO_URI is missing. Add it in Render Environment Variables.");
@@ -35,7 +35,7 @@ async function connectDB() {
         });
         console.log("✅ MongoDB Connected");
     } catch (err) {
-        console.error("❌ MongoDB Error:", err.message);
+        console.error("❌ MongoDB FULL ERROR:", err);
         process.exit(1); // stop server if DB fails
     }
 }

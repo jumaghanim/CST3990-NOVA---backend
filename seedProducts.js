@@ -6,7 +6,7 @@ const mongoose = require("mongoose");
 
 const MONGO_URI =
     process.env.MONGO_URI ||
-    "mongodb+srv://novaUser:NovaStore2026@cluster0.fzuyeqi.mongodb.net/nova_store?retryWrites=true&w=majority";
+    "mongodb+srv://novaUser:NovaStore2026@cluster0.fzuyeqi.mongodb.net/nova_store";
 
 if (!MONGO_URI) {
     console.error("❌ MONGO_URI is missing. Add it in Render or your local .env");
