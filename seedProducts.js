@@ -4,13 +4,16 @@ const mongoose = require("mongoose");
    MongoDB Connection
 ========================= */
 
-const MONGO_URI = process.env.MONGO_URI || 
-"mongodb+srv://novaUser:NovaStore2026@cluster0.fzuyeqi.mongodb.net/nova_store?retryWrites=true&w=majority";
+const MONGO_URI =
+    process.env.MONGO_URI ||
+    "mongodb+srv://novaUser:NovaStore2026@cluster0.fzuyeqi.mongodb.net/nova_store?retryWrites=true&w=majority";
 
-mongoose.connect(MONGO_URI)
-.then(() => console.log("✅ MongoDB Connected"))
-.catch(err => console.log("❌ MongoDB Error:", err));
+if (!MONGO_URI) {
+    console.error("❌ MONGO_URI is missing. Add it in Render or your local .env");
+    process.exit(1);
+}
 
+mongoose.set("strictQuery", true);
 /* =========================
    PRODUCT SCHEMA
 ========================= */
@@ -70,10 +73,12 @@ const specSchema = new mongoose.Schema({
 }, { _id: false });
 
 const productSchema = new mongoose.Schema({
-    name: { type: String, required: true, unique: true },
+    name: { type: String, required: true, unique: true, trim: true },
     longDescription: { type: String, default: "" },
     basePrice: { type: Number, required: true },
-    isNew: { type: Boolean, default: false },
+
+    isNewProduct: { type: Boolean, default: false },
+
     bgColor: { type: String, default: "#ffffff" },
     textColor: { type: String, default: "#000000" },
 
@@ -1702,6 +1707,12 @@ const products = [
 
 async function seedProducts() {
     try {
+        await mongoose.connect(MONGO_URI, {
+            serverSelectionTimeoutMS: 10000
+        });
+
+        console.log("✅ MongoDB Connected");
+
         await Product.deleteMany({});
         console.log("🗑️ Old products deleted");
 
@@ -1718,12 +1729,11 @@ async function seedProducts() {
 
         await Product.insertMany(products);
         console.log("✅ Products inserted successfully");
-
-        mongoose.connection.close();
-        console.log("🔒 Database connection closed");
     } catch (error) {
         console.log("❌ Seeding error:", error);
-        mongoose.connection.close();
+    } finally {
+        await mongoose.connection.close();
+        console.log("🔒 Database connection closed");
     }
 }
 
