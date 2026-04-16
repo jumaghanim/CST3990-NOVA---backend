@@ -228,9 +228,9 @@ const products = [
     longDescription: 'Built for Apple Intelligence. Featuring the all-new Camera Control and the A18 chip.',
     isNew: true, // It's the 16, so usually marked as new!
     basePrice: 2199,
-    bgColor: '#f5f5f7',
+    bgColor: '#ffffff',
     stock:10,
-    textColor: '#000000',
+    textColor: '#ffffff',
      gallery: [
         'pics/extraimg16-1.png',
         'pics/extraimg16-2.webp',
@@ -271,7 +271,50 @@ const products = [
         { name: 'Pink', hex: '#f0adb7', image: 'pics/iphone16pink.png' },
         { name: 'White', hex: '#ffffff', image: 'pics/iphone16white.png' },
         { name: 'Black', hex: '#323433', image: 'pics/iphone16black.png' }
-    ]
+    ],
+    inventory: [
+    // iPhone 16 (6.1")
+    { model: 'iPhone 16', color: 'Ultramarine', storage: '128GB', stock: 8 },
+    { model: 'iPhone 16', color: 'Ultramarine', storage: '256GB', stock: 6 },
+    { model: 'iPhone 16', color: 'Ultramarine', storage: '512GB', stock: 4 },
+
+    { model: 'iPhone 16', color: 'Teal', storage: '128GB', stock: 7 },
+    { model: 'iPhone 16', color: 'Teal', storage: '256GB', stock: 5 },
+    { model: 'iPhone 16', color: 'Teal', storage: '512GB', stock: 3 },
+
+    { model: 'iPhone 16', color: 'Pink', storage: '128GB', stock: 9 },
+    { model: 'iPhone 16', color: 'Pink', storage: '256GB', stock: 6 },
+    { model: 'iPhone 16', color: 'Pink', storage: '512GB', stock: 3 },
+
+    { model: 'iPhone 16', color: 'White', storage: '128GB', stock: 10 },
+    { model: 'iPhone 16', color: 'White', storage: '256GB', stock: 7 },
+    { model: 'iPhone 16', color: 'White', storage: '512GB', stock: 4 },
+
+    { model: 'iPhone 16', color: 'Black', storage: '128GB', stock: 11 },
+    { model: 'iPhone 16', color: 'Black', storage: '256GB', stock: 8 },
+    { model: 'iPhone 16', color: 'Black', storage: '512GB', stock: 5 },
+
+    // iPhone 16 Plus (6.7")
+    { model: 'iPhone 16 Plus', color: 'Ultramarine', storage: '128GB', stock: 6 },
+    { model: 'iPhone 16 Plus', color: 'Ultramarine', storage: '256GB', stock: 4 },
+    { model: 'iPhone 16 Plus', color: 'Ultramarine', storage: '512GB', stock: 2 },
+
+    { model: 'iPhone 16 Plus', color: 'Teal', storage: '128GB', stock: 5 },
+    { model: 'iPhone 16 Plus', color: 'Teal', storage: '256GB', stock: 3 },
+    { model: 'iPhone 16 Plus', color: 'Teal', storage: '512GB', stock: 2 },
+
+    { model: 'iPhone 16 Plus', color: 'Pink', storage: '128GB', stock: 7 },
+    { model: 'iPhone 16 Plus', color: 'Pink', storage: '256GB', stock: 4 },
+    { model: 'iPhone 16 Plus', color: 'Pink', storage: '512GB', stock: 2 },
+
+    { model: 'iPhone 16 Plus', color: 'White', storage: '128GB', stock: 8 },
+    { model: 'iPhone 16 Plus', color: 'White', storage: '256GB', stock: 5 },
+    { model: 'iPhone 16 Plus', color: 'White', storage: '512GB', stock: 3 },
+
+    { model: 'iPhone 16 Plus', color: 'Black', storage: '128GB', stock: 9 },
+    { model: 'iPhone 16 Plus', color: 'Black', storage: '256GB', stock: 6 },
+    { model: 'iPhone 16 Plus', color: 'Black', storage: '512GB', stock: 3 }
+]
 },
 {
     name: 'iPhone 16 Pro',
@@ -969,8 +1012,8 @@ const products = [
     longDescription: 'The ultimate audio experience with adaptive noise cancellation, heart rate tracking and the powerful H3 chip.',
     basePrice: 949,
     isNew: true,
-   bgColor: '#ffffff',
-    textColor: '#000000',
+   bgColor: '#000000',
+    textColor: '#ffffff',
 
     gallery: [
         'pics/extraimgairpodspro3-1.png',
@@ -1016,7 +1059,11 @@ const products = [
         { label: 'ANC', value: 'Optional Active Noise Cancellation' },
         { label: 'Battery', value: 'Up to 24 hours with case' },
         { label: 'Case', value: 'USB-C Charging Case' }
-    ]
+    ],
+    inventory: [
+    { model: 'Standard', color: 'White', stock: 15 },
+    { model: 'With Active Noise Cancellation', color: 'White', stock: 10 }
+]
 },
     {
     name: 'Airpods Max',
@@ -1039,7 +1086,14 @@ const products = [
         { label: 'ANC', value: 'Industry-leading Active Noise Cancellation' },
         { label: 'Spatial Audio', value: 'Dynamic Head Tracking' },
         { label: 'Battery', value: 'Up to 20 Hours Listening Time' }
-    ]
+    ],
+    inventory: [
+    { color: 'Midnight', stock: 6 },
+    { color: 'Starlight', stock: 5 },
+    { color: 'Blue', stock: 4 },
+    { color: 'Purple', stock: 3 },
+    { color: 'Orange', stock: 2 }
+]
 },
 //samsung
   // =========================
@@ -1074,10 +1128,43 @@ const products = [
       { name: 'Navy', hex: '#2f4466', image: 'pics/samsungs25navyblue.png' },
       { name: 'Silver Shadow', hex: '#c9c9c9', image: 'pics/samsungs25silver.png' },
       { name: 'Mint', hex: '#cceee1', image: 'pics/samsungs25green.png' }
-    ]
+    ],
+   inventory: [
+  // Galaxy S25
+  { model: 'Galaxy S25', color: 'Icyblue', storage: '128GB', stock: 10 },
+  { model: 'Galaxy S25', color: 'Icyblue', storage: '256GB', stock: 7 },
+  { model: 'Galaxy S25', color: 'Icyblue', storage: '512GB', stock: 5 },
+
+  { model: 'Galaxy S25', color: 'Navy', storage: '128GB', stock: 9 },
+  { model: 'Galaxy S25', color: 'Navy', storage: '256GB', stock: 6 },
+  { model: 'Galaxy S25', color: 'Navy', storage: '512GB', stock: 4 },
+
+  { model: 'Galaxy S25', color: 'Silver Shadow', storage: '128GB', stock: 11 },
+  { model: 'Galaxy S25', color: 'Silver Shadow', storage: '256GB', stock: 8 },
+  { model: 'Galaxy S25', color: 'Silver Shadow', storage: '512GB', stock: 5 },
+
+  { model: 'Galaxy S25', color: 'Mint', storage: '128GB', stock: 10 },
+  { model: 'Galaxy S25', color: 'Mint', storage: '256GB', stock: 7 },
+  { model: 'Galaxy S25', color: 'Mint', storage: '512GB', stock: 4 },
+
+  // Galaxy S25+
+  { model: 'Galaxy S25+', color: 'Icyblue', storage: '128GB', stock: 7 },
+  { model: 'Galaxy S25+', color: 'Icyblue', storage: '256GB', stock: 5 },
+  { model: 'Galaxy S25+', color: 'Icyblue', storage: '512GB', stock: 3 },
+
+  { model: 'Galaxy S25+', color: 'Navy', storage: '128GB', stock: 6 },
+  { model: 'Galaxy S25+', color: 'Navy', storage: '256GB', stock: 4 },
+  { model: 'Galaxy S25+', color: 'Navy', storage: '512GB', stock: 2 },
+
+  { model: 'Galaxy S25+', color: 'Silver Shadow', storage: '128GB', stock: 8 },
+  { model: 'Galaxy S25+', color: 'Silver Shadow', storage: '256GB', stock: 5 },
+  { model: 'Galaxy S25+', color: 'Silver Shadow', storage: '512GB', stock: 3 },
+
+  { model: 'Galaxy S25+', color: 'Mint', storage: '128GB', stock: 7 },
+  { model: 'Galaxy S25+', color: 'Mint', storage: '256GB', stock: 4 },
+  { model: 'Galaxy S25+', color: 'Mint', storage: '512GB', stock: 2 }
+]
   },
-
-
   {
     name: 'Galaxy S25 Ultra',
     longDescription: 'Samsung’s premium Ultra flagship with built-in S Pen, titanium build, top-end camera system, and advanced Galaxy AI features.',
@@ -1107,7 +1194,24 @@ const products = [
       { name: 'Titanium Black', hex: '#2a2a2a', image: 'pics/s25ultratitaniumblack.png' },
       { name: 'Titanium Gray', hex: '#8f9195', image: 'pics/s25ultrawhitesilver.png' },
       { name: 'Titanium Whitesilver', hex: '#dddddb', image: 'pics/s25ultratitgrey.png' }
-    ]
+    ],
+    inventory: [
+  { color: 'Titanium Silverblue', storage: '256GB', stock: 8 },
+  { color: 'Titanium Silverblue', storage: '512GB', stock: 5 },
+  { color: 'Titanium Silverblue', storage: '1TB', stock: 3 },
+
+  { color: 'Titanium Black', storage: '256GB', stock: 9 },
+  { color: 'Titanium Black', storage: '512GB', stock: 6 },
+  { color: 'Titanium Black', storage: '1TB', stock: 4 },
+
+  { color: 'Titanium Gray', storage: '256GB', stock: 7 },
+  { color: 'Titanium Gray', storage: '512GB', stock: 5 },
+  { color: 'Titanium Gray', storage: '1TB', stock: 3 },
+
+  { color: 'Titanium Whitesilver', storage: '256GB', stock: 6 },
+  { color: 'Titanium Whitesilver', storage: '512GB', stock: 4 },
+  { color: 'Titanium Whitesilver', storage: '1TB', stock: 2 }
+]
   },
 
  {
@@ -1115,8 +1219,8 @@ const products = [
   longDescription: 'The latest Samsung flagship lineup for 2026 with Galaxy AI, premium performance, brighter displays, and powerful cameras.',
   basePrice: 3599,
   isNew: true,
-  bgColor: '#ffffff',
-  textColor: '#111111',
+  bgColor: '#000000',
+    textColor: '#ffffff',
   models: [
     { name: 'Galaxy S26', priceMod: 0, display: '6.3 inch' },
     { name: 'Galaxy S26+', priceMod:700, display: '6.7 inch' }
@@ -1138,9 +1242,35 @@ const products = [
     { name: 'Black', hex: '#1A1A1A', image: 'pics/s26black.png' },
     { name: 'Sky Blue', hex: '#87CEEB', image: 'pics/s26skyblue.png' },
     { name: 'White', hex: '#F5F5F5', image: 'pics/s26white.png' }
-  ]
-},
+  ],
+  inventory: [
+  // Galaxy S26
+  { model: 'Galaxy S26', color: 'Cobalt Violet', storage: '256GB', stock: 9 },
+  { model: 'Galaxy S26', color: 'Cobalt Violet', storage: '512GB', stock: 6 },
 
+  { model: 'Galaxy S26', color: 'Black', storage: '256GB', stock: 10 },
+  { model: 'Galaxy S26', color: 'Black', storage: '512GB', stock: 7 },
+
+  { model: 'Galaxy S26', color: 'Sky Blue', storage: '256GB', stock: 8 },
+  { model: 'Galaxy S26', color: 'Sky Blue', storage: '512GB', stock: 5 },
+
+  { model: 'Galaxy S26', color: 'White', storage: '256GB', stock: 9 },
+  { model: 'Galaxy S26', color: 'White', storage: '512GB', stock: 6 },
+
+  // Galaxy S26+
+  { model: 'Galaxy S26+', color: 'Cobalt Violet', storage: '256GB', stock: 6 },
+  { model: 'Galaxy S26+', color: 'Cobalt Violet', storage: '512GB', stock: 4 },
+
+  { model: 'Galaxy S26+', color: 'Black', storage: '256GB', stock: 7 },
+  { model: 'Galaxy S26+', color: 'Black', storage: '512GB', stock: 5 },
+
+  { model: 'Galaxy S26+', color: 'Sky Blue', storage: '256GB', stock: 6 },
+  { model: 'Galaxy S26+', color: 'Sky Blue', storage: '512GB', stock: 4 },
+
+  { model: 'Galaxy S26+', color: 'White', storage: '256GB', stock: 7 },
+  { model: 'Galaxy S26+', color: 'White', storage: '512GB', stock: 5 }
+]
+},
 
   {
     name: 'Galaxy S26 Ultra',
@@ -1171,7 +1301,24 @@ const products = [
     { name: 'Black', hex: '#1A1A1A', image: 'pics/samsungs26ultrablack.webp' },
     { name: 'Sky Blue', hex: '#87CEEB', image: 'pics/s26ultraskyblue.png' },
     { name: 'White', hex: '#F5F5F5', image: 'pics/s26ultrawhite.png' }
-    ]
+    ],
+    inventory: [
+  { color: 'Cobalt Violet', storage: '256GB', stock: 7 },
+  { color: 'Cobalt Violet', storage: '512GB', stock: 5 },
+  { color: 'Cobalt Violet', storage: '1TB', stock: 3 },
+
+  { color: 'Black', storage: '256GB', stock: 8 },
+  { color: 'Black', storage: '512GB', stock: 6 },
+  { color: 'Black', storage: '1TB', stock: 4 },
+
+  { color: 'Sky Blue', storage: '256GB', stock: 7 },
+  { color: 'Sky Blue', storage: '512GB', stock: 5 },
+  { color: 'Sky Blue', storage: '1TB', stock: 3 },
+
+  { color: 'White', storage: '256GB', stock: 6 },
+  { color: 'White', storage: '512GB', stock: 4 },
+  { color: 'White', storage: '1TB', stock: 2 }
+]
   },
 
   // =========================
@@ -1287,187 +1434,206 @@ const products = [
     ]
   },
 
-  {
+   {
     name: 'Galaxy Z Flip6',
-    longDescription: 'Premium Samsung flip phone with Galaxy AI, improved battery life, a 50MP camera, and stylish compact form factor.',
+    longDescription: ' Premium Samsung flip phone with Galaxy AI, improved battery life, a 50MP camera, and stylish compact form factor.',
     basePrice: 1948,
+    stock: 10,
     isNew: false,
     bgColor: '#ffffff',
     textColor: '#111111',
-    gallery: [
-      'pics/zflip6-1.png',
-      'pics/zflip6-2.png',
-      'pics/zflip6-3.png'
-    ],
+    
     specs: [
-      { label: 'Main Display', value: '6.7" Dynamic AMOLED 2X, 120Hz' },
-      { label: 'Cover Display', value: '3.4" Super AMOLED' },
-      { label: 'Chip', value: 'Snapdragon 8 Gen 3 for Galaxy' },
-      { label: 'Camera', value: '50MP + 12MP Dual Camera' },
-      { label: 'Battery', value: '4000mAh' }
+        { label: 'Main Display', value: '6.7" Dynamic AMOLED 2X, 120Hz <i class="fa-solid fa-mobile-screen-button"></i>' },
+        { label: 'Cover Display', value: '3.4" Super AMOLED <i class="fa-solid fa-mobile-screen"></i>' },
+        { label: 'Chip', value: 'Snapdragon 8 Gen 3 for Galaxy <i class="fa-solid fa-microchip"></i>' },
+        { label: 'Camera', value: '50MP + 12MP Dual Camera <i class="fa-solid fa-camera-retro"></i>' },
+        { label: 'Battery', value: '4000mAh <i class="fa-solid fa-battery-three-quarters"></i>' }
     ],
     storageOptions: [
-      { name: '256GB', priceMod: 0 },
-      { name: '512GB', priceMod: 300 }
+        { name: '256GB', priceMod: 0 },
+        { name: '512GB', priceMod: 300 }
     ],
     colors: [
-      { name: 'Silver Shadow', hex: '#c9c9c9', image: 'pics/zflip6-silver.png' },
-      { name: 'Blue', hex: '#6d93cc', image: 'pics/zflip6-blue.png' },
-      { name: 'Yellow', hex: '#f2d64b', image: 'pics/zflip6-yellow.png' },
-      { name: 'Mint', hex: '#c8ebdf', image: 'pics/zflip6-mint.png' }
+        { name: 'Silver Shadow', hex: '#c9c9c9', image: 'pics/zflip6silvershadow.png' },
+        { name: 'Blue', hex: '#6d93cc', image: 'pics/zflip6blue.png' },
+        { name: 'Yellow', hex: '#f2d64b', image: 'pics/zflip6yellow.png' },
+        { name: 'Mint', hex: '#c8ebdf', image: 'pics/zflip6mint.png' }
+    ],
+    inventory: [
+        { color: 'Silver Shadow', storage: '256GB', stock: 5 },
+        { color: 'Silver Shadow', storage: '512GB', stock: 3 },
+
+        { color: 'Blue', storage: '256GB', stock: 6 },
+        { color: 'Blue', storage: '512GB', stock: 4 },
+
+        { color: 'Yellow', storage: '256GB', stock: 4 },
+        { color: 'Yellow', storage: '512GB', stock: 2 },
+
+        { color: 'Mint', storage: '256GB', stock: 7 },
+        { color: 'Mint', storage: '512GB', stock: 5 }
     ]
-  },
-
-
+},
 
   // =========================
   // GALAXY Z FOLD SERIES
   // =========================
-
-  {
+{
     name: 'Galaxy Z Fold7',
-    longDescription: 'Samsung’s most advanced foldable with a huge inner display, premium multitasking experience, and upgraded flagship camera system.',
+    longDescription: ' Samsung’s most advanced foldable with a huge inner display, premium multitasking experience, and upgraded flagship camera system.',
     basePrice: 6259,
+    stock: 10,
     isNew: true,
     bgColor: '#f9f9f9',
     textColor: '#111111',
     gallery: [
-      'pics/zfold7-1.png',
-      'pics/zfold7-2.png',
-      'pics/zfold7-3.png'
+        'pics/zfold7-1.png',
+        'pics/zfold7-2.png',
+        'pics/zfold7-3.png'
     ],
     specs: [
-      { label: 'Main Display', value: '8.0" AMOLED, 120Hz' },
-      { label: 'Cover Display', value: '6.5" AMOLED' },
-      { label: 'Chip', value: 'Snapdragon 8 Elite for Galaxy' },
-      { label: 'Camera', value: '200MP + 12MP + 10MP Triple Camera' },
-      { label: 'Battery', value: '4400mAh' }
+        { label: 'Main Display', value: '8.0" AMOLED, 120Hz <i class="fa-solid fa-mobile-screen-button"></i>' },
+        { label: 'Cover Display', value: '6.5" AMOLED <i class="fa-solid fa-mobile-screen"></i>' },
+        { label: 'Chip', value: 'Snapdragon 8 Elite for Galaxy <i class="fa-solid fa-microchip"></i>' },
+        { label: 'Camera', value: '200MP + 12MP + 10MP Triple Camera <i class="fa-solid fa-camera-retro"></i>' },
+        { label: 'Battery', value: '4400mAh <i class="fa-solid fa-battery-three-quarters"></i>' }
     ],
     storageOptions: [
-      { name: '256GB', priceMod: 0 },
-      { name: '512GB', priceMod: 420 },
-      { name: '1TB', priceMod: 1300 }
+        { name: '256GB', priceMod: 0 },
+        { name: '512GB', priceMod: 420 },
+        { name: '1TB', priceMod: 1300 }
     ],
     colors: [
-      { name: 'Blue Shadow', hex: '#627ea0', image: 'pics/zfold7-blue.png' },
-      { name: 'Silver Shadow', hex: '#d0d0d0', image: 'pics/zfold7-silver.png' },
-      { name: 'Jetblack', hex: '#1c1c1c', image: 'pics/zfold7-black.png' },
-      { name: 'Mint', hex: '#c8ebdf', image: 'pics/zfold7-mint.png' }
-    ]
-  },
+        { name: 'Blue Shadow', hex: '#627ea0', image: 'pics/zfold7-blue.png' },
+        { name: 'Silver Shadow', hex: '#d0d0d0', image: 'pics/zfold7-silver.png' },
+        { name: 'Jetblack', hex: '#1c1c1c', image: 'pics/zfold7-black.png' },
+        { name: 'Mint', hex: '#c8ebdf', image: 'pics/zfold7-mint.png' }
+    ],
+    inventory: [
+        { color: 'Blue Shadow', storage: '256GB', stock: 4 },
+        { color: 'Blue Shadow', storage: '512GB', stock: 3 },
+        { color: 'Blue Shadow', storage: '1TB', stock: 2 },
 
-  {
+        { color: 'Silver Shadow', storage: '256GB', stock: 5 },
+        { color: 'Silver Shadow', storage: '512GB', stock: 4 },
+        { color: 'Silver Shadow', storage: '1TB', stock: 2 },
+
+        { color: 'Jetblack', storage: '256GB', stock: 6 },
+        { color: 'Jetblack', storage: '512GB', stock: 4 },
+        { color: 'Jetblack', storage: '1TB', stock: 3 },
+
+        { color: 'Mint', storage: '256GB', stock: 3 },
+        { color: 'Mint', storage: '512GB', stock: 2 },
+        { color: 'Mint', storage: '1TB', stock: 1 }
+    ]
+},
+
+{
     name: 'Galaxy Z Fold6',
-    longDescription: 'Premium Samsung book-style foldable with strong multitasking, Galaxy AI features, and flagship-class performance in a thinner design.',
+    longDescription: ' Premium Samsung book-style foldable with strong multitasking, Galaxy AI features, and flagship-class performance in a thinner design.',
     basePrice: 3678,
+    stock: 10,
     isNew: false,
     bgColor: '#fbfbfb',
     textColor: '#111111',
     gallery: [
-      'pics/zfold6-1.png',
-      'pics/zfold6-2.png',
-      'pics/zfold6-3.png'
+        'pics/zfold6-1.png',
+        'pics/zfold6-2.png',
+        'pics/zfold6-3.png'
     ],
     specs: [
-      { label: 'Main Display', value: '7.6" Dynamic AMOLED 2X, 120Hz' },
-      { label: 'Cover Display', value: '6.3" Dynamic AMOLED 2X' },
-      { label: 'Chip', value: 'Snapdragon 8 Gen 3 for Galaxy' },
-      { label: 'Camera', value: '50MP + 12MP + 10MP Triple Camera' },
-      { label: 'Battery', value: '4400mAh' }
+        { label: 'Main Display', value: '7.6" Dynamic AMOLED 2X, 120Hz <i class="fa-solid fa-mobile-screen-button"></i>' },
+        { label: 'Cover Display', value: '6.3" Dynamic AMOLED 2X <i class="fa-solid fa-mobile-screen"></i>' },
+        { label: 'Chip', value: 'Snapdragon 8 Gen 3 for Galaxy <i class="fa-solid fa-microchip"></i>' },
+        { label: 'Camera', value: '50MP + 12MP + 10MP Triple Camera <i class="fa-solid fa-camera-retro"></i>' },
+        { label: 'Battery', value: '4400mAh <i class="fa-solid fa-battery-three-quarters"></i>' }
     ],
     storageOptions: [
-      { name: '256GB', priceMod: 0 },
-      { name: '512GB', priceMod: 500 },
-      { name: '1TB', priceMod: 1200 }
+        { name: '256GB', priceMod: 0 },
+        { name: '512GB', priceMod: 500 },
+        { name: '1TB', priceMod: 1200 }
     ],
     colors: [
-      { name: 'Silver Shadow', hex: '#d0d0d0', image: 'pics/zfold6-silver.png' },
-      { name: 'Pink', hex: '#e6c9d5', image: 'pics/zfold6-pink.png' },
-      { name: 'Navy', hex: '#24385c', image: 'pics/zfold6-navy.png' },
-      { name: 'White', hex: '#efefef', image: 'pics/zfold6-white.png' }
-    ]
-  },
+        { name: 'Silver Shadow', hex: '#d0d0d0', image: 'pics/zfold6-silver.png' },
+        { name: 'Pink', hex: '#e6c9d5', image: 'pics/zfold6-pink.png' },
+        { name: 'Navy', hex: '#24385c', image: 'pics/zfold6-navy.png' },
+        { name: 'White', hex: '#efefef', image: 'pics/zfold6-white.png' }
+    ],
+    inventory: [
+        { color: 'Silver Shadow', storage: '256GB', stock: 6 },
+        { color: 'Silver Shadow', storage: '512GB', stock: 4 },
+        { color: 'Silver Shadow', storage: '1TB', stock: 2 },
 
-  {
-    name: 'Galaxy Z Fold5',
-    longDescription: 'A refined Samsung foldable with flagship performance, large inner screen, and a durable hinge for multitasking and entertainment.',
-    basePrice: 2399,
-    isNew: false,
-    bgColor: '#f9f9f9',
-    textColor: '#111111',
-    gallery: [
-      'pics/zfold5-1.png',
-      'pics/zfold5-2.png',
-      'pics/zfold5-3.png'
-    ],
-    specs: [
-      { label: 'Main Display', value: '7.6" Dynamic AMOLED 2X, 120Hz' },
-      { label: 'Cover Display', value: '6.2" Dynamic AMOLED 2X' },
-      { label: 'Chip', value: 'Snapdragon 8 Gen 2 for Galaxy' },
-      { label: 'Camera', value: '50MP + 12MP + 10MP Triple Camera' },
-      { label: 'Battery', value: '4400mAh' }
-    ],
-    storageOptions: [
-      { name: '256GB', priceMod: 0 },
-      { name: '512GB', priceMod: 400 },
-      { name: '1TB', priceMod: 900 }
-    ],
-    colors: [
-      { name: 'Icy Blue', hex: '#b7d5ee', image: 'pics/zfold5-icyblue.png' },
-      { name: 'Phantom Black', hex: '#1f1f1f', image: 'pics/zfold5-black.png' },
-      { name: 'Cream', hex: '#ece4d3', image: 'pics/zfold5-cream.png' },
-      { name: 'Gray', hex: '#92959b', image: 'pics/zfold5-gray.png' }
-    ]
-  },
+        { color: 'Pink', storage: '256GB', stock: 4 },
+        { color: 'Pink', storage: '512GB', stock: 3 },
+        { color: 'Pink', storage: '1TB', stock: 1 },
 
-  {
-    name: 'Galaxy Z Fold4',
-    longDescription: 'An earlier flagship Samsung foldable with a productivity-focused big screen, S Pen support, and premium multitasking capabilities.',
-    basePrice: 2095,
-    isNew: false,
-    bgColor: '#f8f8f8',
-    textColor: '#111111',
-    gallery: [
-      'pics/zfold4-1.png',
-      'pics/zfold4-2.png',
-      'pics/zfold4-3.png'
-    ],
-    specs: [
-      { label: 'Main Display', value: '7.6" Dynamic AMOLED 2X, 120Hz' },
-      { label: 'Cover Display', value: '6.2" Dynamic AMOLED 2X' },
-      { label: 'Chip', value: 'Snapdragon 8+ Gen 1' },
-      { label: 'Camera', value: '50MP + 12MP + 10MP Triple Camera' },
-      { label: 'Battery', value: '4400mAh' }
-    ],
-    storageOptions: [
-      { name: '256GB', priceMod: 0 },
-      { name: '512GB', priceMod: 400 },
-      { name: '1TB', priceMod: 900 }
-    ],
-    colors: [
-      { name: 'Graygreen', hex: '#6f786e', image: 'pics/zfold4-graygreen.png' },
-      { name: 'Phantom Black', hex: '#1f1f1f', image: 'pics/zfold4-black.png' },
-      { name: 'Beige', hex: '#d8ccb7', image: 'pics/zfold4-beige.png' },
-      { name: 'Burgundy', hex: '#6b1e2c', image: 'pics/zfold4-burgundy.png' }
-    ]
-  },
+        { color: 'Navy', storage: '256GB', stock: 7 },
+        { color: 'Navy', storage: '512GB', stock: 5 },
+        { color: 'Navy', storage: '1TB', stock: 2 },
 
+        { color: 'White', storage: '256GB', stock: 3 },
+        { color: 'White', storage: '512GB', stock: 2 },
+        { color: 'White', storage: '1TB', stock: 1 }
+    ]
+},
+  
   // =========================
   // GALAXY A SERIES
   // =========================
+{
+    name: 'Galaxy A57 5G',
+    longDescription: 'Upper mid-range Samsung smartphone with a smooth 120Hz AMOLED display, improved camera system, and powerful performance for everyday and gaming use.',
+    basePrice: 1739,
+    isNew: true,
+    bgColor: '#ffffff',
+    textColor: '#111111',
 
+    specs: [
+        { label: 'Display', value: '6.7" FHD+ Super AMOLED, 120Hz' },
+        { label: 'Chip', value: 'Exynos 1480' },
+        { label: 'Camera', value: '64MP + 12MP + 5MP Triple Camera (OIS)' },
+        { label: 'Battery', value: '5000mAh' },
+        { label: 'Charging', value: '25W Fast Charging' },
+        { label: 'Build', value: 'Glass Front & Back' }
+    ],
+
+    storageOptions: [
+        { name: '128GB', priceMod: 0 },
+        { name: '256GB', priceMod: 210 },
+    ],
+
+    colors: [
+        { name: 'Awesome Ice Blue', hex: '#b5d8eb', image: 'pics/galaxya575gicyblue.avif' },
+        { name: 'Awesome Navy', hex: '#24385c', image: 'pics/galaxy1575gnavy.avif' },
+        { name: 'Awesome Lilac', hex: '#d7c4eb', image: 'pics/galaxya575glilac.avif' },
+        { name: 'Awesome Grey', hex: '#8e8d8a', image: 'pics/galaxya575ggrey.avif' }
+    ],
+
+    inventory: [
+        { color: 'Awesome Ice Blue', storage: '128GB', stock: 10 },
+        { color: 'Awesome Ice Blue', storage: '256GB', stock: 6 },
+        
+
+        { color: 'Awesome Navy', storage: '128GB', stock: 9 },
+        { color: 'Awesome Navy', storage: '256GB', stock: 5 },
+        
+
+        { color: 'Awesome Lilac', storage: '128GB', stock: 8 },
+        { color: 'Awesome Lilac', storage: '256GB', stock: 4 },
+        
+        { color: 'Awesome Lemon', storage: '128GB', stock: 7 },
+        { color: 'Awesome Lemon', storage: '256GB', stock: 4 },
+    ]
+},
   {
     name: 'Galaxy A55 5G',
     longDescription: 'Premium mid-range Samsung phone with a glass-and-metal design, dependable battery life, and a strong AMOLED display.',
-    basePrice: 1499,
+    basePrice: 1019,
     isNew: false,
     bgColor: '#ffffff',
     textColor: '#111111',
-    gallery: [
-      'pics/a55-1.png',
-      'pics/a55-2.png',
-      'pics/a55-3.png'
-    ],
+    
     specs: [
       { label: 'Display', value: '6.6" FHD+ Super AMOLED, 120Hz' },
       { label: 'Chip', value: 'Exynos 1480' },
@@ -1477,194 +1643,264 @@ const products = [
     ],
     storageOptions: [
       { name: '128GB', priceMod: 0 },
-      { name: '256GB', priceMod: 200 }
+      { name: '256GB', priceMod: 170 }
     ],
     colors: [
-      { name: 'Awesome Iceblue', hex: '#b5d8eb', image: 'pics/a55-iceblue.png' },
-      { name: 'Awesome Lilac', hex: '#d7c4eb', image: 'pics/a55-lilac.png' },
-      { name: 'Awesome Lemon', hex: '#f4e66a', image: 'pics/a55-lemon.png' },
-      { name: 'Awesome Navy', hex: '#24385c', image: 'pics/a55-navy.png' }
-    ]
-  },
+      { name: 'Awesome Iceblue', hex: '#b5d8eb', image: 'pics/galaxya555gblue.jpg' },
+      { name: 'Awesome Navy', hex: '#24385c', image: 'pics/galaxya555gblack.jpg' }
+    ],
+     inventory: [
+        { color: 'Awesome Iceblue', storage: '128GB', stock: 6 },
+        { color: 'Awesome Iceblue', storage: '256GB', stock: 4 },
 
+        { color: 'Awesome Navy', storage: '128GB', stock: 7 },
+        { color: 'Awesome Navy', storage: '256GB', stock: 5 }
+    ]
+
+  },
   {
-    name: 'Galaxy A35 5G',
+    name: 'Galaxy A36 5G',
     longDescription: 'Balanced mid-range Samsung phone with a bright 120Hz AMOLED display, solid OIS camera, and sleek design.',
-    basePrice: 779,
+    basePrice: 1250,
     isNew: false,
     bgColor: '#ffffff',
     textColor: '#111111',
-    gallery: [
-      'pics/a35-1.png',
-      'pics/a35-2.png',
-      'pics/a35-3.png'
-    ],
-    specs: [
-      { label: 'Display', value: '6.6" FHD+ Super AMOLED, 120Hz' },
-      { label: 'Chip', value: 'Exynos 1380' },
-      { label: 'Camera', value: '50MP + 8MP + 5MP Triple Camera' },
-      { label: 'Battery', value: '5000mAh' },
-      { label: 'Charging', value: '25W Fast Charging' }
-    ],
-    storageOptions: [
-      { name: '128GB', priceMod: 0 },
-      { name: '256GB', priceMod: 120 }
-    ],
-    colors: [
-      { name: 'Awesome Iceblue', hex: '#b5d8eb', image: 'pics/a35-iceblue.png' },
-      { name: 'Awesome Lilac', hex: '#d7c4eb', image: 'pics/a35-lilac.png' },
-      { name: 'Awesome Lemon', hex: '#f4e66a', image: 'pics/a35-lemon.png' },
-      { name: 'Awesome Navy', hex: '#24385c', image: 'pics/a35-navy.png' }
-    ]
-  },
 
-  {
-    name: 'Galaxy A25 5G',
-    longDescription: 'Affordable Samsung 5G phone with an AMOLED display, 50MP main camera, and reliable battery life for daily use.',
-    basePrice: 849,
-    isNew: false,
-    bgColor: '#ffffff',
-    textColor: '#111111',
-    gallery: [
-      'pics/a25-1.png',
-      'pics/a25-2.png',
-      'pics/a25-3.png'
-    ],
     specs: [
-      { label: 'Display', value: '6.5" FHD+ Super AMOLED, 120Hz' },
-      { label: 'Chip', value: 'Exynos 1280' },
-      { label: 'Camera', value: '50MP + 8MP + 2MP Triple Camera' },
-      { label: 'Battery', value: '5000mAh' },
-      { label: 'Charging', value: '25W Fast Charging' }
+        { label: 'Display', value: '6.6" FHD+ Super AMOLED, 120Hz' },
+        { label: 'Chip', value: 'Exynos 1380' },
+        { label: 'Camera', value: '50MP + 8MP + 5MP Triple Camera' },
+        { label: 'Battery', value: '5000mAh' },
+        { label: 'Charging', value: '25W Fast Charging' }
     ],
-    storageOptions: [
-      { name: '128GB', priceMod: 0 },
-      { name: '256GB', priceMod: 100 }
-    ],
-    colors: [
-      { name: 'Blue Black', hex: '#26364f', image: 'pics/a25-blueblack.png' },
-      { name: 'Blue', hex: '#8bb4de', image: 'pics/a25-blue.png' },
-      { name: 'Yellow', hex: '#f1df63', image: 'pics/a25-yellow.png' },
-      { name: 'Light Blue', hex: '#a9d6ea', image: 'pics/a25-lightblue.png' }
-    ]
-  },
 
-  {
-    name: 'Galaxy A15 5G',
-    longDescription: 'Budget-friendly Samsung 5G phone with a large AMOLED display, long battery life, and solid value for everyday use.',
-    basePrice: 399,
-    isNew: false,
-    bgColor: '#ffffff',
-    textColor: '#111111',
-    gallery: [
-      'pics/a15-1.png',
-      'pics/a15-2.png',
-      'pics/a15-3.png'
-    ],
-    specs: [
-      { label: 'Display', value: '6.5" FHD+ Super AMOLED, 90Hz' },
-      { label: 'Chip', value: 'Dimensity 6100+' },
-      { label: 'Camera', value: '50MP + 5MP + 2MP Triple Camera' },
-      { label: 'Battery', value: '5000mAh' },
-      { label: 'Charging', value: '25W Fast Charging' }
-    ],
     storageOptions: [
-      { name: '128GB', priceMod: 0 },
-      { name: '256GB', priceMod: 120 }
+        { name: '128GB', priceMod: 0 },
+        { name: '256GB', priceMod: 100 }
     ],
-    colors: [
-      { name: 'Blue Black', hex: '#26364f', image: 'pics/a15-blueblack.png' },
-      { name: 'Blue', hex: '#9bc2e8', image: 'pics/a15-blue.png' },
-      { name: 'Yellow', hex: '#f2de75', image: 'pics/a15-yellow.png' },
-      { name: 'Light Blue', hex: '#b8dcf2', image: 'pics/a15-lightblue.png' }
-    ]
-  },
 
-  {
-    name: 'Galaxy A15 LTE',
-    longDescription: 'Low-cost Samsung LTE smartphone with a bright display, large battery, and dependable daily performance.',
-    basePrice: 449,
-    isNew: false,
-    bgColor: '#ffffff',
-    textColor: '#111111',
-    gallery: [
-      'pics/a15lte-1.png',
-      'pics/a15lte-2.png',
-      'pics/a15lte-3.png'
-    ],
-    specs: [
-      { label: 'Display', value: '6.5" FHD+ Super AMOLED, 90Hz' },
-      { label: 'Chip', value: 'Helio G99' },
-      { label: 'Camera', value: '50MP + 5MP + 2MP Triple Camera' },
-      { label: 'Battery', value: '5000mAh' },
-      { label: 'Charging', value: '25W Fast Charging' }
-    ],
-    storageOptions: [
-      { name: '128GB', priceMod: 0 },
-      { name: '256GB', priceMod: 100 }
-    ],
     colors: [
-      { name: 'Blue Black', hex: '#26364f', image: 'pics/a15lte-blueblack.png' },
-      { name: 'Blue', hex: '#9bc2e8', image: 'pics/a15lte-blue.png' },
-      { name: 'Yellow', hex: '#f2de75', image: 'pics/a15lte-yellow.png' },
-      { name: 'Light Blue', hex: '#b8dcf2', image: 'pics/a15lte-lightblue.png' }
-    ]
-  },
+        { name: 'Awesome Lavender', hex: '#b5d8eb', image: 'pics/galaxya36lavender.png' },
+        { name: 'Awesome Lilac', hex: '#d7c4eb', image: 'pics/galaxya36white.avif' },
+        { name: 'Awesome Lime', hex: '#f4e66a', image: 'pics/galaxy136lime.png' },
+        { name: 'Awesome Navy', hex: '#24385c', image: 'pics/galaxya36black.png' }
+    ],
 
-  {
-    name: 'Galaxy A05s',
-    longDescription: 'Entry-level Samsung smartphone with a large screen, 50MP main camera, and excellent battery life for everyday tasks.',
-    basePrice: 499,
-    isNew: false,
-    bgColor: '#ffffff',
-    textColor: '#111111',
-    gallery: [
-      'pics/a05s-1.png',
-      'pics/a05s-2.png',
-      'pics/a05s-3.png'
-    ],
-    specs: [
-      { label: 'Display', value: '6.7" FHD+ PLS LCD, 90Hz' },
-      { label: 'Chip', value: 'Snapdragon 680' },
-      { label: 'Camera', value: '50MP + 2MP + 2MP Triple Camera' },
-      { label: 'Battery', value: '5000mAh' },
-      { label: 'Charging', value: '25W Fast Charging' }
-    ],
-    storageOptions: [
-      { name: '64GB', priceMod: 0 },
-      { name: '128GB', priceMod: 100 }
-    ],
-    colors: [
-      { name: 'Black', hex: '#1f1f1f', image: 'pics/a05s-black.png' },
-      { name: 'Silver', hex: '#d8d8d8', image: 'pics/a05s-silver.png' },
-      { name: 'Light Green', hex: '#c8dcc7', image: 'pics/a05s-green.png' },
-      { name: 'Light Violet', hex: '#d7c9ef', image: 'pics/a05s-violet.png' }
-    ]
-  },
-  //Galaxy Watch
-{
-    name: 'Galaxy Watch',
-    longDescription: 'Smart health tracking, a premium round design, and powerful fitness features in a Samsung smartwatch.',
-    basePrice: 1299,
-    isNew: true,
-    bgColor: '#ffffff',
-    textColor: '#000000',
-    specs: [
-        { label: 'Health', value: 'Heart Rate, ECG, Sleep Tracking' },
-        { label: 'Battery', value: 'Up to 40 Hours' },
-        { label: 'Fitness', value: 'Advanced Workout Tracking' },
-        { label: 'Build', value: 'Armor Aluminum' }
-    ],
-    sizes: [
-        { name: '40mm', basePrice: 0 },
-        { name: '44mm', basePrice: 200 }
-    ],
-    colors: [
-        { name: 'Black', hex: '#1a1a1a', image: 'pics/galaxywatch-black.png' },
-        { name: 'Silver', hex: '#cfd3d6', image: 'pics/galaxywatch-silver.png' },
-        { name: 'Gold', hex: '#c8a96b', image: 'pics/galaxywatch-gold.png' }
+    inventory: [
+        { color: 'Awesome Iceblue', storage: '128GB', stock: 8 },
+        { color: 'Awesome Iceblue', storage: '256GB', stock: 5 },
+
+        { color: 'Awesome Lilac', storage: '128GB', stock: 7 },
+        { color: 'Awesome Lilac', storage: '256GB', stock: 4 },
+
+        { color: 'Awesome Lemon', storage: '128GB', stock: 6 },
+        { color: 'Awesome Lemon', storage: '256GB', stock: 3 },
+
+        { color: 'Awesome Navy', storage: '128GB', stock: 9 },
+        { color: 'Awesome Navy', storage: '256GB', stock: 5 }
     ]
 },
+
+{
+    name: 'Galaxy A26 5G',
+    longDescription: 'Affordable Samsung 5G phone with an AMOLED display, 50MP main camera, and reliable battery life for daily use.',
+    basePrice: 750,
+    isNew: false,
+    bgColor: '#ffffff',
+    textColor: '#111111',
+
+    specs: [
+        { label: 'Display', value: '6.5" FHD+ Super AMOLED, 120Hz' },
+        { label: 'Chip', value: 'Exynos 1280' },
+        { label: 'Camera', value: '50MP + 8MP + 2MP Triple Camera' },
+        { label: 'Battery', value: '5000mAh' },
+        { label: 'Charging', value: '25W Fast Charging' }
+    ],
+
+    storageOptions: [
+        { name: '128GB', priceMod: 0 },
+        { name: '256GB', priceMod: 110 }
+    ],
+
+    colors: [
+        { name: 'Black', hex: '#26364f', image: 'pics/galaxya26black.avif' },
+        { name: 'white', hex: '#ffffff', image: 'pics/galaxya26white.avif' },
+        { name: 'pink', hex: '#F99584', image: 'pics/galaxya26pink.avif' },
+      
+    ],
+
+    inventory: [
+        { color: 'Black', storage: '128GB', stock: 10 },
+        { color: 'Black', storage: '256GB', stock: 6 },
+
+        { color: 'white', storage: '128GB', stock: 7 },
+        { color: 'white', storage: '256GB', stock: 4 },
+
+        { color: 'pink', storage: '128GB', stock: 9 },
+        { color: 'pink', storage: '256GB', stock: 5 }
+    ]
+},
+
+{
+    name: 'Galaxy A16 5G',
+    longDescription: 'Budget-friendly Samsung 5G phone with a large AMOLED display, long battery life, and solid value for everyday use.',
+    basePrice: 455,
+    isNew: false,
+    bgColor: '#ffffff',
+    textColor: '#111111',
+
+    gallery: [
+        'pics/a15-1.png',
+        'pics/a15-2.png',
+        'pics/a15-3.png'
+    ],
+
+    specs: [
+        { label: 'Display', value: '6.5" FHD+ Super AMOLED, 90Hz' },
+        { label: 'Chip', value: 'Dimensity 6100+' },
+        { label: 'Camera', value: '50MP + 5MP + 2MP Triple Camera' },
+        { label: 'Battery', value: '5000mAh' },
+        { label: 'Charging', value: '25W Fast Charging' }
+    ],
+
+    storageOptions: [
+        { name: '128GB', priceMod: 0 },
+        { name: '256GB', priceMod: 150 }
+    ],
+
+    colors: [
+        { name: 'Black', hex: '#010914', image: 'pics/galaxya16black.avif' },
+        { name: 'Green', hex: '#60ad65', image: 'pics/galaxya16green.avif' },
+        { name: 'Grey', hex: '#a7a499', image: 'pics/galaxya16grey.avif' },
+        
+    ],
+
+    inventory: [
+        { color: 'Black', storage: '128GB', stock: 12 },
+        { color: 'Black', storage: '256GB', stock: 7 },
+
+        { color: 'Green', storage: '128GB', stock: 10 },
+        { color: 'Green', storage: '256GB', stock: 6 },
+
+        { color: 'Grey', storage: '128GB', stock: 8 },
+        { color: 'Grey', storage: '256GB', stock: 5 },
+    ]
+},
+  //Galaxy Watch
+     {
+    name: 'Galaxy Watch Ultra',
+    longDescription: 'Premium rugged Samsung smartwatch with LTE, 1.5" Super AMOLED display, titanium casing, dual-frequency GPS, Galaxy AI-powered wellness insights, and long-lasting battery life built for outdoor adventure and everyday fitness.',
+    basePrice: 2399,
+    isNew: true,
+    bgColor: '#000000',
+    textColor: '#ffffff',
+
+    gallery: [
+        'pics/watchultra2025-1.png',
+        'pics/watchultra2025-2.png',
+        'pics/watchultra2025-3.png'
+    ],
+
+    specs: [
+        { label: 'Case Size', value: '47 mm' },
+        { label: 'Display', value: '1.5" Super AMOLED' },
+        { label: 'Processor', value: '3nm Processor' },
+        { label: 'Battery', value: 'Up to 100 hours (Power Saving Mode)' },
+        { label: 'Durability', value: '10ATM Water Resistance + Titanium Build' },
+        { label: 'Navigation', value: 'GPS / Dual-Frequency GPS' },
+        { label: 'Connectivity', value: 'LTE, Bluetooth, Wi-Fi' },
+        { label: 'Health', value: 'BioActive Sensor & Galaxy AI Insights' }
+    ],
+
+    
+    colors: [
+        { name: 'Titanium Blue', hex: '#071f38', image: 'pics/watchultrablue.avif' },
+        { name: 'Titanium Silver', hex: '#b9bcc3', image: 'pics/watchultrasilver.avif' },
+        { name: 'Titanium Gray', hex: '#6d7178', image: 'pics/watchultratitaniumgray.avif' },
+        { name: 'Titanium White', hex: '#ffffff', image: 'pics/watchultrawhite.avif' }
+    ],
+
+    inventory: [
+        { color: 'Titanium Blue',  stock: 6 },
+        { color: 'Titanium Silver',  stock: 5 },
+        { color: 'Titanium Gray',  stock: 7 },
+        { color: 'Titanium White',  stock: 4 }
+    ]
+},
+ {
+    name: 'Galaxy Watch 8',
+    longDescription: 'Slim and powerful Samsung smartwatch with Galaxy AI, advanced health tracking, sleep coaching, and a sleek cushion design built for everyday fitness and lifestyle.',
+    basePrice: 1399,
+    isNew: true,
+    bgColor: '#000000',
+    textColor: '#ffffff',
+gallery: [
+        'pics/extraimgwatch8.avif',
+        'pics/extraimgwatch8-3.avif',
+        'pics/extraimgwatch8-2.avif'
+    ],
+
+      
+     specs: [
+        { label: 'Display', value: '1.47" Super AMOLED' },
+        { label: 'Processor', value: '3nm Exynos Processor' },
+        { label: 'Battery', value: 'Up to 40 hours' },
+        { label: 'Build', value: 'Aluminum Armor Case' },
+        { label: 'Health', value: 'Heart Rate, SpO2, Sleep Tracking, ECG' },
+        { label: 'Fitness', value: 'Running Coach & Activity Tracking' },
+        { label: 'OS', value: 'Wear OS + One UI Watch' },
+        { label: 'Connectivity', value: 'Bluetooth / LTE (variant)' }
+    ],
+
+    colors: [
+        { name: 'Graphite', hex: '#2b2b2b', image: 'pics/glaxywatch8graphite.avif' },
+        { name: 'Silver', hex: '#c7c9cc', image: 'pics/galaxywatch8silver.avif' }
+    ],
+
+    inventory: [
+        { color: 'Graphite', stock: 10 },
+        { color: 'Graphite', stock: 6 },
+
+        { color: 'Silver',stock: 8 },
+        { color: 'Silver', stock: 5 }
+    ]
+},
+ {
+    name: 'Galaxy Watch 8 Classic',
+    longDescription: 'Premium Samsung smartwatch with a timeless rotating bezel, AI-powered health tracking, advanced fitness features, and elegant classic styling built for everyday wear.',
+    basePrice: 1699,
+    isNew: true,
+    bgColor: '#000000',
+    textColor: '#ffffff',
+
+    gallery: [
+        'pics/extraimgwatch8classic-1.avif',
+        'pics/extraimgwatch8classic-2.avif',
+        'pics/extraimgwatch8classic-3.avif'
+    ],
+
+    specs: [
+        { label: 'Case Size', value: '46 mm' },
+        { label: 'Display', value: 'Super AMOLED' },
+        { label: 'Processor', value: '3nm Exynos Processor' },
+        { label: 'Build', value: 'Stainless Steel + Sapphire Crystal' },
+        { label: 'Feature', value: 'Rotating Bezel + Quick Button' },
+        { label: 'Battery', value: '445mAh' },
+        { label: 'Health', value: 'Sleep Tracking, Heart Rate, ECG, Body Composition' },
+        { label: 'OS', value: 'Wear OS + One UI Watch' }
+    ],
+
+    colors: [
+        { name: 'Black', hex: '#1f1f1f', image: 'pics/watch8classicblack.avif' },
+        { name: 'White', hex: '#f2f2f2', image: 'pics/watch8classicwhite.avif' }
+    ],
+
+    inventory: [
+        { color: 'Black',  stock: 7 },
+        { color: 'White',  stock: 5 }
+    ]
+}, 
+
 {
     name: 'Galaxy Tab',
     longDescription: 'A premium Samsung tablet experience with a large immersive display, S Pen support, and strong multitasking power.',
