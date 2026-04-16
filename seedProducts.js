@@ -107,8 +107,8 @@ const products = [
     longDescription: 'The first iPhone with an aerospace-grade titanium design and the A17 Pro chip.',
     basePrice: 3490,
     isNew: false,
-     bgColor: '#ffffff',
-    textColor: '#000000',
+      bgColor: '#000000',
+    textColor: '#ffffff',
     gallery: [
         'pics/extraimg15pro.jpg',
         'pics/extraimg15pro1.webp',
@@ -228,9 +228,9 @@ const products = [
     longDescription: 'Built for Apple Intelligence. Featuring the all-new Camera Control and the A18 chip.',
     isNew: true, // It's the 16, so usually marked as new!
     basePrice: 2199,
-    bgColor: '#ffffff',
-    stock:10,
+     bgColor: '#000000',
     textColor: '#ffffff',
+    stock:10,
      gallery: [
         'pics/extraimg16-1.png',
         'pics/extraimg16-2.webp',
@@ -583,8 +583,8 @@ const products = [
         storageOptions: [{ name: '256GB', priceMod: 0 }, { name: '512GB', priceMod: 850 },{ name: '1TB', priceMod: 1700 }],
         colors: [
             { name: 'Sky Blue', hex: '#87CEEB', image: 'pics/iphoneairskyblue.png' },
-            { name: 'Light Gold', hex: '#F1E5AC', image: 'pics/iphoneairlightgold.png' },
-             { name: 'Black', hex: '#000000', image: 'pics/iphoneairblack.png' },
+            { name: 'Light Gold', hex: '#F1E5AC', image: 'pics/iphoneairgold.png' },
+             { name: 'Black', hex: '#000000', image: 'pics/iphoneairgold.png' },
               { name: 'White', hex: '#ffffff', image: 'pics/iphoneairwhite.png' }
         ],
         inventory: [
@@ -643,12 +643,12 @@ const products = [
         { color: 'Starlight', model: '44mm', stock: 4 }
     ]
 },
-    {
+   {
     name: 'Watch Series 11',
     longDescription: 'Groundbreaking health insights. Featuring Hypertension notifications, Sleep Score, and advanced connectivity.',
     basePrice: 1599,
-    bgColor: '#ffffff',
-    textColor: '#000000',
+     bgColor: '#000000',
+    textColor: '#ffffff',
 
     specs: [
         { label: 'Health', value: 'Hypertension Alerts' },
@@ -715,6 +715,7 @@ const products = [
     { color: 'Gold', model: 'Titanium',  stock: 1 }
 ]
 },
+        
     //iPad
    {
     name: 'iPad Pro',
@@ -962,8 +963,9 @@ const products = [
     longDescription: 'Supercharged by the Apple M4 chip, MacBook Air is strikingly thin, incredibly light, and built for all-day productivity and creativity.',
     basePrice: 4599,
     isNew: true,
-    bgColor: '#f5f5f7',
-    textColor: '#000000',
+     bgColor: '#000000',
+    textColor: '#ffffff',
+
     gallery: [
         'pics/extraimgmacair1.png',
         'pics/extraimgmacair2.jpg'
@@ -1004,7 +1006,34 @@ const products = [
         { label: 'Storage', value: 'Up to 2TB SSD storage' },
         { label: 'Ports', value: 'MagSafe, 2x Thunderbolt / USB 4, headphone jack' },
         { label: 'Wireless', value: 'Wi-Fi 6E and Bluetooth 5.3' }
-    ]
+    ],
+    inventory: [
+  // 13 inch
+  { model: '13 inch', chip: 'M5 Chip', variant: '10-core CPU, 8-core GPU, 16-core Neural Engine', color: 'Sky Blue', stock: 6 },
+  { model: '13 inch', chip: 'M5 Chip', variant: '10-core CPU, 10-core GPU, 16-core Neural Engine', color: 'Sky Blue', stock: 4 },
+
+  { model: '13 inch', chip: 'M5 Chip', variant: '10-core CPU, 8-core GPU, 16-core Neural Engine', color: 'Silver', stock: 7 },
+  { model: '13 inch', chip: 'M5 Chip', variant: '10-core CPU, 10-core GPU, 16-core Neural Engine', color: 'Silver', stock: 5 },
+
+  { model: '13 inch', chip: 'M5 Chip', variant: '10-core CPU, 8-core GPU, 16-core Neural Engine', color: 'Starlight', stock: 5 },
+  { model: '13 inch', chip: 'M5 Chip', variant: '10-core CPU, 10-core GPU, 16-core Neural Engine', color: 'Starlight', stock: 3 },
+
+  { model: '13 inch', chip: 'M5 Chip', variant: '10-core CPU, 8-core GPU, 16-core Neural Engine', color: 'Midnight', stock: 8 },
+  { model: '13 inch', chip: 'M5 Chip', variant: '10-core CPU, 10-core GPU, 16-core Neural Engine', color: 'Midnight', stock: 5 },
+
+  // 15 inch
+  { model: '15 inch', chip: 'M5 Chip', variant: '10-core CPU, 8-core GPU, 16-core Neural Engine', color: 'Sky Blue', stock: 4 },
+  { model: '15 inch', chip: 'M5 Chip', variant: '10-core CPU, 10-core GPU, 16-core Neural Engine', color: 'Sky Blue', stock: 3 },
+
+  { model: '15 inch', chip: 'M5 Chip', variant: '10-core CPU, 8-core GPU, 16-core Neural Engine', color: 'Silver', stock: 5 },
+  { model: '15 inch', chip: 'M5 Chip', variant: '10-core CPU, 10-core GPU, 16-core Neural Engine', color: 'Silver', stock: 3 },
+
+  { model: '15 inch', chip: 'M5 Chip', variant: '10-core CPU, 8-core GPU, 16-core Neural Engine', color: 'Starlight', stock: 4 },
+  { model: '15 inch', chip: 'M5 Chip', variant: '10-core CPU, 10-core GPU, 16-core Neural Engine', color: 'Starlight', stock: 2 },
+
+  { model: '15 inch', chip: 'M5 Chip', variant: '10-core CPU, 8-core GPU, 16-core Neural Engine', color: 'Midnight', stock: 6 },
+  { model: '15 inch', chip: 'M5 Chip', variant: '10-core CPU, 10-core GPU, 16-core Neural Engine', color: 'Midnight', stock: 3 }
+]
 },
     //Airpods
     {
@@ -1328,7 +1357,7 @@ const products = [
  {
   name: 'Galaxy Z Flip7',
   longDescription: 'Slim premium flip phone with Galaxy AI, a larger 4.1-inch FlexWindow, flagship-level 50MP camera system, and a compact foldable design.',
-  basePrice: 3479,
+  basePrice: 4299,
   isNew: true,
 
   bgColor: '#000000',
@@ -1361,7 +1390,7 @@ const products = [
 
   storageOptions: [
     { name: '256GB', priceMod: 0,  },
-    { name: '512GB', priceMod: 435, }
+    { name: '512GB', priceMod: 490, }
   ],
 
   colors: [
@@ -1407,7 +1436,7 @@ const products = [
   {
     name: 'Galaxy Z Flip7 FE',
     longDescription: 'More affordable Galaxy flip phone with Galaxy AI, compact foldable styling, and strong everyday performance.',
-    basePrice: 2599,
+    basePrice: 3499,
     isNew: true,
     bgColor: '#000000',
     textColor: '#ffffff',
@@ -1420,16 +1449,19 @@ const products = [
       { label: 'Battery', value: '4000mAh' }
     ],
     storageOptions: [
-      { name: '256GB', priceMod: 0 }
+        { name: '128GB', priceMod: 0 },
+      { name: '256GB', priceMod: 400 }
     ],
     colors: [
       { name: 'Black', hex: '#202020', image: 'pics/zflip7feblack.png' },
       { name: 'White', hex: '#f3f3f3', image: 'pics/zflip7fewhite.png' }
     ],
     inventory: [
-        { color: 'Black', storage: '256GB', stock: 7 },
+        { color: 'Black', storage: '128GB', stock: 5 },
+         { color: 'Black', storage: '256GB', stock: 7 },
+
+        { color: 'White', storage: '128GBGB', stock: 5 },
          { color: 'White', storage: '256GB', stock: 5 },
-       
        
     ]
   },
@@ -1437,7 +1469,7 @@ const products = [
    {
     name: 'Galaxy Z Flip6',
     longDescription: ' Premium Samsung flip phone with Galaxy AI, improved battery life, a 50MP camera, and stylish compact form factor.',
-    basePrice: 1948,
+    basePrice: 3999,
     stock: 10,
     isNew: false,
     bgColor: '#ffffff',
@@ -1452,7 +1484,7 @@ const products = [
     ],
     storageOptions: [
         { name: '256GB', priceMod: 0 },
-        { name: '512GB', priceMod: 300 }
+        { name: '512GB', priceMod: 500 }
     ],
     colors: [
         { name: 'Silver Shadow', hex: '#c9c9c9', image: 'pics/zflip6silvershadow.png' },
@@ -1478,19 +1510,14 @@ const products = [
   // =========================
   // GALAXY Z FOLD SERIES
   // =========================
-{
+  {
     name: 'Galaxy Z Fold7',
     longDescription: ' Samsung’s most advanced foldable with a huge inner display, premium multitasking experience, and upgraded flagship camera system.',
-    basePrice: 6259,
+    basePrice: 7299,
     stock: 10,
     isNew: true,
-    bgColor: '#f9f9f9',
-    textColor: '#111111',
-    gallery: [
-        'pics/zfold7-1.png',
-        'pics/zfold7-2.png',
-        'pics/zfold7-3.png'
-    ],
+    bgColor: '#000000',
+    textColor: '#fefefe',
     specs: [
         { label: 'Main Display', value: '8.0" AMOLED, 120Hz <i class="fa-solid fa-mobile-screen-button"></i>' },
         { label: 'Cover Display', value: '6.5" AMOLED <i class="fa-solid fa-mobile-screen"></i>' },
@@ -1500,14 +1527,14 @@ const products = [
     ],
     storageOptions: [
         { name: '256GB', priceMod: 0 },
-        { name: '512GB', priceMod: 420 },
+        { name: '512GB', priceMod: 500 },
         { name: '1TB', priceMod: 1300 }
     ],
     colors: [
-        { name: 'Blue Shadow', hex: '#627ea0', image: 'pics/zfold7-blue.png' },
-        { name: 'Silver Shadow', hex: '#d0d0d0', image: 'pics/zfold7-silver.png' },
-        { name: 'Jetblack', hex: '#1c1c1c', image: 'pics/zfold7-black.png' },
-        { name: 'Mint', hex: '#c8ebdf', image: 'pics/zfold7-mint.png' }
+        { name: 'Blue Shadow', hex: '#627ea0', image: 'pics/galaxyzfold7blue.png' },
+        { name: 'Silver Shadow', hex: '#d0d0d0', image: 'pics/galaxyzfold7silver.png' },
+        { name: 'Jetblack', hex: '#1c1c1c', image: 'pics/galaxyzfold7jetblack.png' },
+        
     ],
     inventory: [
         { color: 'Blue Shadow', storage: '256GB', stock: 4 },
@@ -1520,27 +1547,18 @@ const products = [
 
         { color: 'Jetblack', storage: '256GB', stock: 6 },
         { color: 'Jetblack', storage: '512GB', stock: 4 },
-        { color: 'Jetblack', storage: '1TB', stock: 3 },
-
-        { color: 'Mint', storage: '256GB', stock: 3 },
-        { color: 'Mint', storage: '512GB', stock: 2 },
-        { color: 'Mint', storage: '1TB', stock: 1 }
+        { color: 'Jetblack', storage: '1TB', stock: 3 }
     ]
 },
 
 {
     name: 'Galaxy Z Fold6',
     longDescription: ' Premium Samsung book-style foldable with strong multitasking, Galaxy AI features, and flagship-class performance in a thinner design.',
-    basePrice: 3678,
+    basePrice: 6799,
     stock: 10,
     isNew: false,
-    bgColor: '#fbfbfb',
-    textColor: '#111111',
-    gallery: [
-        'pics/zfold6-1.png',
-        'pics/zfold6-2.png',
-        'pics/zfold6-3.png'
-    ],
+    bgColor: '#000000',
+    textColor: '#fefefe',
     specs: [
         { label: 'Main Display', value: '7.6" Dynamic AMOLED 2X, 120Hz <i class="fa-solid fa-mobile-screen-button"></i>' },
         { label: 'Cover Display', value: '6.3" Dynamic AMOLED 2X <i class="fa-solid fa-mobile-screen"></i>' },
@@ -1554,10 +1572,10 @@ const products = [
         { name: '1TB', priceMod: 1200 }
     ],
     colors: [
-        { name: 'Silver Shadow', hex: '#d0d0d0', image: 'pics/zfold6-silver.png' },
-        { name: 'Pink', hex: '#e6c9d5', image: 'pics/zfold6-pink.png' },
-        { name: 'Navy', hex: '#24385c', image: 'pics/zfold6-navy.png' },
-        { name: 'White', hex: '#efefef', image: 'pics/zfold6-white.png' }
+        { name: 'Silver Shadow', hex: '#d0d0d0', image: 'pics/galaxyzfold6silver.png' },
+        { name: 'Pink', hex: '#e6c9d5', image: 'pics/galaxyzfold6pink.png' },
+        { name: 'Navy', hex: '#24385c', image: 'pics/galaxyzfold6navy.png' },
+
     ],
     inventory: [
         { color: 'Silver Shadow', storage: '256GB', stock: 6 },
@@ -1570,11 +1588,8 @@ const products = [
 
         { color: 'Navy', storage: '256GB', stock: 7 },
         { color: 'Navy', storage: '512GB', stock: 5 },
-        { color: 'Navy', storage: '1TB', stock: 2 },
+        { color: 'Navy', storage: '1TB', stock: 2 }
 
-        { color: 'White', storage: '256GB', stock: 3 },
-        { color: 'White', storage: '512GB', stock: 2 },
-        { color: 'White', storage: '1TB', stock: 1 }
     ]
 },
   
@@ -1584,10 +1599,11 @@ const products = [
 {
     name: 'Galaxy A57 5G',
     longDescription: 'Upper mid-range Samsung smartphone with a smooth 120Hz AMOLED display, improved camera system, and powerful performance for everyday and gaming use.',
-    basePrice: 1739,
+    basePrice: 1199,
     isNew: true,
-    bgColor: '#ffffff',
-    textColor: '#111111',
+  bgColor: '#000000',
+    textColor: '#ffffff',
+
 
     specs: [
         { label: 'Display', value: '6.7" FHD+ Super AMOLED, 120Hz' },
@@ -1601,6 +1617,7 @@ const products = [
     storageOptions: [
         { name: '128GB', priceMod: 0 },
         { name: '256GB', priceMod: 210 },
+         { name: '512GB', priceMod: 450 }
     ],
 
     colors: [
@@ -1613,26 +1630,31 @@ const products = [
     inventory: [
         { color: 'Awesome Ice Blue', storage: '128GB', stock: 10 },
         { color: 'Awesome Ice Blue', storage: '256GB', stock: 6 },
+        { color: 'Awesome Ice Blue', storage: '512GB', stock: 6 },
         
 
         { color: 'Awesome Navy', storage: '128GB', stock: 9 },
         { color: 'Awesome Navy', storage: '256GB', stock: 5 },
+        { color: 'Awesome Navy', storage: '512GB', stock: 5 },
         
 
         { color: 'Awesome Lilac', storage: '128GB', stock: 8 },
         { color: 'Awesome Lilac', storage: '256GB', stock: 4 },
+        { color: 'Awesome Lilac', storage: '512GB', stock: 8 },
         
-        { color: 'Awesome Lemon', storage: '128GB', stock: 7 },
-        { color: 'Awesome Lemon', storage: '256GB', stock: 4 },
+        { color: 'Awesome Grey', storage: '128GB', stock: 7 },
+        { color: 'Awesome Grey', storage: '256GB', stock: 4 },
+          { color:'Awesome Grey', storage:'512GB', stock: 4 },
     ]
 },
   {
     name: 'Galaxy A55 5G',
     longDescription: 'Premium mid-range Samsung phone with a glass-and-metal design, dependable battery life, and a strong AMOLED display.',
-    basePrice: 1019,
+    basePrice: 1499,
     isNew: false,
-    bgColor: '#ffffff',
-    textColor: '#111111',
+     bgColor: '#000000',
+    textColor: '#ffffff',
+
     
     specs: [
       { label: 'Display', value: '6.6" FHD+ Super AMOLED, 120Hz' },
@@ -1643,7 +1665,7 @@ const products = [
     ],
     storageOptions: [
       { name: '128GB', priceMod: 0 },
-      { name: '256GB', priceMod: 170 }
+      { name: '256GB', priceMod: 190 }
     ],
     colors: [
       { name: 'Awesome Iceblue', hex: '#b5d8eb', image: 'pics/galaxya555gblue.jpg' },
@@ -1661,10 +1683,11 @@ const products = [
   {
     name: 'Galaxy A36 5G',
     longDescription: 'Balanced mid-range Samsung phone with a bright 120Hz AMOLED display, solid OIS camera, and sleek design.',
-    basePrice: 1250,
+    basePrice: 770,
     isNew: false,
-    bgColor: '#ffffff',
-    textColor: '#111111',
+     bgColor: '#000000',
+    textColor: '#ffffff',
+
 
     specs: [
         { label: 'Display', value: '6.6" FHD+ Super AMOLED, 120Hz' },
@@ -1687,8 +1710,8 @@ const products = [
     ],
 
     inventory: [
-        { color: 'Awesome Iceblue', storage: '128GB', stock: 8 },
-        { color: 'Awesome Iceblue', storage: '256GB', stock: 5 },
+        { color: 'Awesome Lavender', storage: '128GB', stock: 8 },
+        { color: 'Awesome Lavender', storage: '256GB', stock: 5 },
 
         { color: 'Awesome Lilac', storage: '128GB', stock: 7 },
         { color: 'Awesome Lilac', storage: '256GB', stock: 4 },
@@ -1704,10 +1727,11 @@ const products = [
 {
     name: 'Galaxy A26 5G',
     longDescription: 'Affordable Samsung 5G phone with an AMOLED display, 50MP main camera, and reliable battery life for daily use.',
-    basePrice: 750,
+    basePrice: 849,
     isNew: false,
-    bgColor: '#ffffff',
-    textColor: '#111111',
+    bgColor: '#000000',
+    textColor: '#ffffff',
+
 
     specs: [
         { label: 'Display', value: '6.5" FHD+ Super AMOLED, 120Hz' },
@@ -1746,14 +1770,8 @@ const products = [
     longDescription: 'Budget-friendly Samsung 5G phone with a large AMOLED display, long battery life, and solid value for everyday use.',
     basePrice: 455,
     isNew: false,
-    bgColor: '#ffffff',
-    textColor: '#111111',
-
-    gallery: [
-        'pics/a15-1.png',
-        'pics/a15-2.png',
-        'pics/a15-3.png'
-    ],
+    bgColor: '#000000',
+    textColor: '#ffffff',
 
     specs: [
         { label: 'Display', value: '6.5" FHD+ Super AMOLED, 90Hz' },
@@ -1794,12 +1812,6 @@ const products = [
     isNew: true,
     bgColor: '#000000',
     textColor: '#ffffff',
-
-    gallery: [
-        'pics/watchultra2025-1.png',
-        'pics/watchultra2025-2.png',
-        'pics/watchultra2025-3.png'
-    ],
 
     specs: [
         { label: 'Case Size', value: '47 mm' },
@@ -1900,41 +1912,91 @@ gallery: [
         { color: 'White',  stock: 5 }
     ]
 }, 
-
-{
-    name: 'Galaxy Tab',
-    longDescription: 'A premium Samsung tablet experience with a large immersive display, S Pen support, and strong multitasking power.',
-    basePrice: 2499,
+//Galaxy Buds
+   {
+    name: 'Galaxy Buds 4',
+    longDescription: 'Balanced everyday Samsung earbuds with clear sound, ANC, Super Clear Call, and a sleek modern design for daily listening.',
+    basePrice: 699,
     isNew: true,
-    bgColor: '#ffffff',
-    textColor: '#000000',
-    gallery: [
-        'pics/galaxytab-1.png',
-        'pics/galaxytab-2.png'
-    ],
-    specs: [
-        { label: 'Display', value: '12.4" AMOLED' },
-        { label: 'Chip', value: 'Snapdragon Processor' },
-        { label: 'Battery', value: '10090mAh' },
-        { label: 'Pen', value: 'S Pen Included' },
-        { label: 'Audio', value: 'Quad Speakers by AKG' }
-    ],
-    sizes: [
-        { name: '11-inch', basePrice: 0 },
-        { name: '12.4-inch', basePrice: 600 }
-    ],
-    storageOptions: [
-        { name: '128GB', priceMod: 0 },
-        { name: '256GB', priceMod: 300 },
-        { name: '512GB', priceMod: 800 }
-    ],
+    bgColor: '#000000',
+    textColor: '#ffffff',
     colors: [
-        { name: 'Graphite', hex: '#444444', image: 'pics/galaxytab-graphite.png' },
-        { name: 'Silver', hex: '#d9d9d9', image: 'pics/galaxytab-silver.png' },
-        { name: 'Navy', hex: '#203864', image: 'pics/galaxytab-navy.png' }
+        { name: 'Black', hex: '#1f1f1f', image: 'pics/samsungbuds4black.png' },
+        { name: 'White', hex: '#f5f5f5', image: 'pics/samsungbuds4white.png' }
+    ],
+
+    specs: [
+        { label: 'Speaker', value: '11 mm Wide-range Speaker' },
+        { label: 'Audio', value: '24-bit / 96 kHz Audio' },
+        { label: 'ANC', value: 'Active Noise Cancellation' },
+        { label: 'Calls', value: 'Super Clear Call' },
+        { label: 'Design', value: 'Sleek Metal Blade Design' }
+    ],
+
+    inventory: [
+        { color: 'Black', stock: 9 },
+        { color: 'White', stock: 7 }
+    ]
+},
+{
+    name: 'Galaxy Buds Core',
+    longDescription: 'Comfortable Samsung wireless earbuds with a secure fit, easy connectivity, and reliable everyday sound for music, calls, and workouts.',
+    basePrice: 179,
+    isNew: false,
+    bgColor: '#000000',
+    textColor: '#ffffff',
+
+    gallery: [
+        'pics/extraimgsamsungcore-1.avif',
+        'pics/extraimgsamsungcore-2.avif',
+        'pics/extraimgsamsungcore-3.avif'
+    ],
+
+    colors: [
+        { name: 'Black', hex: '#1b1b1b', image: 'pics/samsungcoreblack.avif' },
+        { name: 'White', hex: '#f5f5f5', image: 'pics/samsungcorewhite.avif' }
+    ],
+
+    specs: [
+        { label: 'Fit', value: 'Silicone Wingtips for Secure Fit' },
+        { label: 'Comfort', value: 'Lightweight All-day Comfort' },
+        { label: 'Connectivity', value: 'Easy, Reliable Connectivity' },
+        { label: 'Use Case', value: 'Daily Listening and Calls' },
+        { label: 'Design', value: 'Compact Charging Case' }
+    ],
+
+    inventory: [
+        { color: 'Black', stock: 12 },
+        { color: 'White', stock: 8 }
+    ]
+},
+{
+    name: 'Galaxy Buds4 Pro',
+    longDescription: 'Premium Samsung earbuds with Hi-Fi sound, advanced 2-way speakers, ANC, and clear voice performance in a refined Galaxy AI-ready design.',
+    basePrice: 950,
+    isNew: true,
+    bgColor: '#000000',
+    textColor: '#ffffff',
+
+    colors: [
+        { name: 'Black', hex: '#1a1a1a', image: 'pics/samsungbuds4blackpro.png' },
+        { name: 'White', hex: '#f4f4f4', image: 'pics/samsungbuds4whitepro.png' },
+    ],
+
+    specs: [
+        { label: 'Speaker', value: 'Advanced 2-way Speaker' },
+        { label: 'Audio', value: '24-bit / 96 kHz Hi-Fi Audio' },
+        { label: 'ANC', value: 'Active Noise Cancellation' },
+        { label: 'Calls', value: 'Super Clear Call' },
+        { label: 'Fit', value: 'Adjust to Fit + Silicone Ear Tips' }
+    ],
+
+    inventory: [
+        { color: 'Black', stock: 7 },
+        { color: 'White', stock: 6 },
     ]
 }
- 
+
 ];
 
 /* =========================
