@@ -1472,8 +1472,8 @@ const products = [
     basePrice: 3999,
     stock: 10,
     isNew: false,
-    bgColor: '#ffffff',
-    textColor: '#111111',
+    bgColor: '#000000',
+    textColor: '#ffffff',
     
     specs: [
         { label: 'Main Display', value: '6.7" Dynamic AMOLED 2X, 120Hz <i class="fa-solid fa-mobile-screen-button"></i>' },
@@ -1486,7 +1486,7 @@ const products = [
         { name: '256GB', priceMod: 0 },
         { name: '512GB', priceMod: 500 }
     ],
-    colors: [
+   colors: [
         { name: 'Silver Shadow', hex: '#c9c9c9', image: 'pics/zflip6silvershadow.png' },
         { name: 'Blue', hex: '#6d93cc', image: 'pics/zflip6blue.png' },
         { name: 'Yellow', hex: '#f2d64b', image: 'pics/zflip6yellow.png' },
